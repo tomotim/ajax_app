@@ -1,9 +1,6 @@
 class PostsController < ApplicationController
   def index # indexアクションを定義定義した
-    @posts = Post.all
-  end
-
-  def new
+    @posts = Post.all.order(id:"DESC")
   end
 
   def create
